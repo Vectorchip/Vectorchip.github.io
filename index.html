@@ -90,10 +90,14 @@
 .node {stroke: #fff; stroke-width: 1.5px;}
 .link {stroke: #999; stroke-opacity: .9;}
 </style>
+
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="d3" src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
 <script type="text/javascript">
 require.config({paths:
-    {d3: "http://d3js.org/d3.v3.min"}});
+    {d3: "https://d3js.org/d3.v3.min"}});
 require(["d3"], function(d3) {
   // The code in this block is executed when the
   // d3.js library has been loaded.
@@ -122,7 +126,7 @@ require(["d3"], function(d3) {
   }
 
   // We load the JSON file.
-  d3.json("https://github.com/Vectorchip/first_repo/blob/master/graph.json", function(error, graph) {
+  d3.json("https://raw.githubusercontent.com/Vectorchip/first_repo/master/graph.json", function(error, graph) {
     // In this block, the file has been loaded
     // and the 'graph' object contains our graph.
 
